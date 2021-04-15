@@ -188,7 +188,8 @@ input:focus {
     color: #111;
   }
 
-  .form-wrapper input {
+  .form-wrapper input[type='text'],
+  .form-wrapper input[type='number'] {
     -webkit-appearance: none;
     margin-bottom: 30px;
     font-size: 20px;
