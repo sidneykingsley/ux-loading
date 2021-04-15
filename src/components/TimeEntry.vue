@@ -116,6 +116,7 @@ label {
   text-align: center;
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
+  max-width: 400px;
 }
 
 button {
