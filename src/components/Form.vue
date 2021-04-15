@@ -190,7 +190,9 @@ input:focus {
 
   .form-wrapper input[type='text'],
   .form-wrapper input[type='number'] {
-    -webkit-appearance: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
     margin-bottom: 30px;
     font-size: 20px;
   }
