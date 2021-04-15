@@ -189,7 +189,9 @@ input:focus {
   }
 
   .form-wrapper input {
+    -webkit-appearance: none;
     margin-bottom: 30px;
+    font-size: 20px;
   }
 
   input:focus {
