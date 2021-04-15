@@ -245,6 +245,18 @@ button {
     color: #222;
   }
 
+  .hint {
+    visibility: hidden;
+    position: relative;
+  }
+  .hint:after {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'HINT: Tap or slide along the bar above for however many seconds you felt you waited';
+  }
+
   .form-wrapper button {
     width: 100%;
     background: #e2856e;
