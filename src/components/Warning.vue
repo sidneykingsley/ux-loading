@@ -43,9 +43,9 @@ export default {
 }
 
 .modal button {
-  background: #057f9e;
-  color: white;
-  font-size: 0.6em;
+  background: #33c5a3;
+  color: #111;
+  font-size: 0.65em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -75,6 +75,9 @@ export default {
 @media only screen and (max-width: 500px) {
   .modal {
     margin: 0 20px;
+  }
+  .modal button {
+    background: #33c5a3;
   }
 }
 </style>

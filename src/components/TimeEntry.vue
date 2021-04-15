@@ -30,6 +30,7 @@
 import { ref } from '@vue/reactivity'
 import { projectFirestore } from '../firebase/config'
 import { useRouter } from 'vue-router'
+import { onMounted } from '@vue/runtime-core'
 
 export default {
   props: ['userId'],
@@ -37,6 +38,12 @@ export default {
     const time = ref(1)
     const hint = ref(false)
     const router = useRouter()
+
+    onMounted(() => {
+      setTimeout(() => {
+        hint.value = true
+      }, 5000)
+    })
 
     const handleResults = async () => {
       console.log('handling results')
@@ -112,9 +119,9 @@ label {
 }
 
 button {
-  background: #057f9e;
-  color: white;
-  font-size: 0.6em;
+  background: #e2856e;
+  color: #111;
+  font-size: 0.65em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -164,7 +171,7 @@ button {
     border-radius: 10px;
     cursor: ew-resize;
     background: #222;
-    box-shadow: -193px 0 0 200px #057f9e;
+    box-shadow: -193px 0 0 200px #e2856e;
   }
 }
 
@@ -190,11 +197,13 @@ button {
   }
 
   .time-wrapper {
+    background: #e2856e;
     display: block;
+    position: fixed;
     top: 0;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
   }
 
   .form-wrapper {
@@ -203,7 +212,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    height: 100vh;
+    height: 100%;
     padding: 0 20px;
   }
 
@@ -232,10 +241,13 @@ button {
     padding: 0;
     margin: 40px 20px 40px 20px;
     text-align: left;
+    color: #222;
   }
 
   .form-wrapper button {
     width: 100%;
+    background: #e2856e;
+    color: #111;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -250,7 +262,7 @@ button {
     input[type='range']::-webkit-slider-runnable-track {
       height: 10px;
       -webkit-appearance: none;
-      color: #13bba4;
+      color: #e2856e;
       margin-top: -1px;
     }
 
@@ -261,7 +273,7 @@ button {
       border-radius: 10px;
       cursor: ew-resize;
       background: #222;
-      box-shadow: -193px 0 0 200px #057f9e;
+      box-shadow: -193px 0 0 200px #e2856e;
     }
   }
 

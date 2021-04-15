@@ -55,12 +55,8 @@ export default {
 
 .welcome button {
   background: #09a8d0;
-  margin-top: 40px;
-}
-
-.welcome button {
-  color: white;
-  font-size: 0.6em;
+  color: #111;
+  font-size: 0.65em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -72,16 +68,17 @@ export default {
 
 @media only screen and (max-width: 500px) {
   body {
-    background: #333;
     margin: 0;
     padding: 0;
   }
   .welcome {
+    background: #09a8d0;
     display: block;
+    position: fixed;
     top: 0;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
   }
 
   .mobile-welcome {
@@ -89,7 +86,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
-    height: 100vh;
+    height: 100%;
     /* padding: 20px; */
   }
 
@@ -112,10 +109,14 @@ export default {
     padding: 0px;
     margin: 30px;
     line-height: inherit;
-    /* border-bottom: solid white 2px; */
+    color: #222;
+    /* border-bottom: solid #222 3px; */
   }
   .welcome p {
     line-height: 30px;
+  }
+  .welcome button {
+    color: #111;
   }
 }
 </style>

@@ -74,9 +74,9 @@ export default {
 }
 
 form button {
-  background: #057f9e;
-  color: white;
-  font-size: 0.6em;
+  background: #33c5a3;
+  color: #111;
+  font-size: 0.65em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -112,7 +112,7 @@ label {
 
 input:focus {
   outline: none;
-  border-bottom-color: #057f9e;
+  border-bottom-color: #33c5a3;
   border-width: 2px;
 }
 
@@ -146,17 +146,19 @@ input:focus {
 
 @media only screen and (max-width: 500px) {
   body {
-    background: #333;
     margin: 0;
     padding: 0;
   }
 
   .form-wrapper {
+    /* background: #09d095; */
+    background: #33c5a3;
     display: block;
+    position: fixed;
     top: 0;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
   }
 
   .mobile-form {
@@ -165,7 +167,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    height: 100vh;
+    height: 100%;
   }
 
   .details-form {
@@ -183,14 +185,21 @@ input:focus {
     padding: 0;
     margin: 40px;
     text-align: left;
+    color: #111;
   }
 
   .form-wrapper input {
     margin-bottom: 30px;
   }
 
+  input:focus {
+    border-bottom-color: #33c5a3;
+  }
+
   .form-wrapper button {
     width: 100%;
+    background: #33c5a3;
+    color: #111;
   }
 }
 </style>
